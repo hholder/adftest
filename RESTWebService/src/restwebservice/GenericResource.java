@@ -15,7 +15,7 @@ public class GenericResource {
     }
 
     @POST
-    public Response postData(String content) {
+    public Response postData(String data) {
 
         // Provide method implementation.
         // TODO

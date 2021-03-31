@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RequestData"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  AliasName="RequestData"
+  BindingStyle="JDBC"
+  RowClass="RESTModel.RequestDataImpl">
+  <DesignTime>
+    <Attr Name="_isProgrammatic" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="Id"
+    IsUpdateable="while_insert"
+    IsNotNull="true"
+    ColumnName="ID"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Content"
+    Precision="2048"
+    ColumnName="CONTENT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"/>
+  <Attribute
+    Name="ContentType"
+    Precision="80"
+    ColumnName="CONTENT_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"/>
+  <Key
+    Name="NoNameIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="NO_NAME_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RESTModel.RequestData.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="RequestdataPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="REQUESTDATA_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RESTModel.RequestData.Id"/>
+    </AttrArray>
+  </Key>
+</Entity>

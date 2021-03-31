@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RequestDataView"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="RESTModel.RequestDataViewRowImpl"
+  ComponentClass="RESTModel.RequestDataViewImpl"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isProgrammatic" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="RequestData"
+    Entity="RESTModel.RequestData"/>
+  <ViewAttribute
+    Name="Id"
+    IsUpdateable="while_insert"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="RequestData"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Content"
+    PrecisionRule="true"
+    EntityAttrName="Content"
+    EntityUsage="RequestData"
+    AliasName="CONTENT"/>
+  <ViewAttribute
+    Name="ContentType"
+    PrecisionRule="true"
+    EntityAttrName="ContentType"
+    EntityUsage="RequestData"
+    AliasName="CONTENT_TYPE"/>
+</ViewObject>
