@@ -6,16 +6,15 @@
   Name="RESTModel"
   Version="12.2.1.12.24"
   SeparateXMLFiles="true"
-  PackageName="RESTModel">
+  PackageName="ky.gov.RESTmodel">
   <DesignTime>
     <Attr Name="_DTExpressionTypeChecking" Value="true"/>
-    <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
-    <Attr Name="_jprName" Value="../../RESTModel.jpr"/>
-    <Attr Name="_jbo.SQLBuilder" Value="SQLServer"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_jprName" Value="../../../../RESTModel.jpr"/>
   </DesignTime>
   <Containee
-    Name="RESTModel"
-    PackageName="RESTModel"
+    Name="RESTmodel"
+    PackageName="ky.gov.RESTmodel"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_EO" Value="true"/>

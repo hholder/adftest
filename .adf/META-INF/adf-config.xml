@@ -2,7 +2,7 @@
 <adf-config xmlns="http://xmlns.oracle.com/adf/config" xmlns:adf="http://xmlns.oracle.com/adf/config/properties"
             xmlns:config="http://xmlns.oracle.com/bc4j/configuration">
   <adf:adf-properties-child xmlns="http://xmlns.oracle.com/adf/config/properties">
-    <adf-property name="adfAppUID" value="ADFRestApp-8464"/>
+    <adf-property name="adfAppUID" value="ADFRestApp.ky.gov"/>
   </adf:adf-properties-child>
   <adf-adfm-config xmlns="http://xmlns.oracle.com/adfm/config">
     <defaults changeEventPolicy="ppr" useBindVarsForViewCriteriaLiterals="true" useBindValuesInFindByKey="true"

@@ -3,17 +3,17 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="RequestDataView"
+  Name="ResponseMessageView"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
   WhereFlags="1"
-  BindingStyle="JDBC"
+  BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  RowClass="RESTModel.RequestDataViewRowImpl"
-  ComponentClass="RESTModel.RequestDataViewImpl"
+  RowClass="ky.gov.RESTmodel.ResponseMessageViewRowImpl"
+  ComponentClass="ky.gov.RESTmodel.ResponseMessageViewImpl"
   PageIterMode="Full">
   <DesignTime>
     <Attr Name="_isProgrammatic" Value="true"/>
@@ -21,26 +21,27 @@
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <EntityUsage
-    Name="RequestData"
-    Entity="RESTModel.RequestData"/>
+    Name="ResponseMessage"
+    Entity="ky.gov.RESTmodel.ResponseMessage"/>
   <ViewAttribute
     Name="Id"
     IsUpdateable="while_insert"
+    IsUnique="true"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Id"
-    EntityUsage="RequestData"
+    EntityUsage="ResponseMessage"
     AliasName="ID"/>
   <ViewAttribute
-    Name="Content"
+    Name="RequestId"
     PrecisionRule="true"
-    EntityAttrName="Content"
-    EntityUsage="RequestData"
-    AliasName="CONTENT"/>
+    EntityAttrName="RequestId"
+    EntityUsage="ResponseMessage"
+    AliasName="REQUEST_ID"/>
   <ViewAttribute
-    Name="ContentType"
+    Name="Status"
     PrecisionRule="true"
-    EntityAttrName="ContentType"
-    EntityUsage="RequestData"
-    AliasName="CONTENT_TYPE"/>
+    EntityAttrName="Status"
+    EntityUsage="ResponseMessage"
+    AliasName="STATUS"/>
 </ViewObject>

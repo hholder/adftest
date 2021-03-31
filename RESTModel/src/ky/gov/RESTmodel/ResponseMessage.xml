@@ -3,21 +3,22 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="RequestData"
+  Name="ResponseMessage"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
   DBObjectType="table"
-  AliasName="RequestData"
-  BindingStyle="JDBC"
-  RowClass="RESTModel.RequestDataImpl">
+  AliasName="ResponseMessage"
+  BindingStyle="OracleName"
+  RowClass="ky.gov.RESTmodel.ResponseMessageImpl">
   <DesignTime>
     <Attr Name="_isProgrammatic" Value="true"/>
-    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Attribute
     Name="Id"
     IsUpdateable="while_insert"
+    IsUnique="true"
     IsNotNull="true"
     ColumnName="ID"
     SQLType="INTEGER"
@@ -25,19 +26,18 @@
     ColumnType="INTEGER"
     PrimaryKey="true"/>
   <Attribute
-    Name="Content"
-    Precision="2048"
-    ColumnName="CONTENT"
+    Name="RequestId"
+    ColumnName="REQUEST_ID"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"/>
+  <Attribute
+    Name="Status"
+    Precision="80"
+    ColumnName="STATUS"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"/>
-  <Attribute
-    Name="ContentType"
-    Precision="80"
-    ColumnName="CONTENT_TYPE"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"/>
   <Key
     Name="NoNameIdCheck">
     <DesignTime>
@@ -47,17 +47,17 @@
       <Attr Name="_DBObjectName" Value="NO_NAME_ID_CHECK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="RESTModel.RequestData.Id"/>
+      <Item Value="ky.gov.RESTmodel.ResponseMessage.Id"/>
     </AttrArray>
   </Key>
   <Key
-    Name="RequestdataPrimaryKey"
+    Name="ResponsemessagePrimaryKey"
     PrimaryKey="true">
     <DesignTime>
-      <Attr Name="_DBObjectName" Value="REQUESTDATA_PRIMARY_KEY"/>
+      <Attr Name="_DBObjectName" Value="RESPONSEMESSAGE_PRIMARY_KEY"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="RESTModel.RequestData.Id"/>
+      <Item Value="ky.gov.RESTmodel.ResponseMessage.Id"/>
     </AttrArray>
   </Key>
 </Entity>
