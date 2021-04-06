@@ -69,7 +69,7 @@
       <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
-   <value n="defaultPackage" v="restwebservice"/>
+   <value n="defaultPackage" v="ky.gov"/>
    <hash n="oracle.ide.model.DependencyConfiguration">
       <list n="dependencyList">
          <hash>
@@ -88,6 +88,7 @@
       <list n="technologyScope">
          <string v="ADFbcREST"/>
          <string v="Java"/>
+         <string v="Maven"/>
          <string v="RESTWebServices"/>
          <string v="XML"/>
       </list>
@@ -176,6 +177,9 @@
          <string v="ADFRestApp_RESTWebService"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
+      <url n="pomfileURL" path="pom.xml"/>
+   </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
       <value n="j2eeWebAppName" v="ADFRestApp-RESTWebService-webapp"/>
       <value n="j2eeWebContextRoot" v="ADFRestApp-RESTWebService-context-root"/>
@@ -195,21 +199,10 @@
             <value n="id" v="ADF Model REST Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
-         <hash>
-            <value n="id" v="JAX-RS Jersey 2.x"/>
-            <value n="isJDK" v="false"/>
-         </hash>
       </list>
-      <hash n="internalDefinitions">
-         <list n="libraryDefinitions"/>
-      </hash>
       <list n="libraryReferences">
          <hash>
             <value n="id" v="ADF Model REST Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JAX-RS Jersey 2.x"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ky.gov</groupId>
+  <artifactId>ADFRestApp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <description>Super POM for ADFRestApp</description>
+  <packaging>pom</packaging>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/</directory>
+        <includes>
+          <include>**</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+  <parent>
+    <groupId>com.oracle.adf</groupId>
+    <artifactId>adf-parent</artifactId>
+    <version>12.2.1-2-0</version>
+    <relativePath></relativePath>
+  </parent>
+  <modules>
+    <module>RESTModel</module>
+    <module>RESTWebService</module>
+  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>ky.gov</groupId>
+      <artifactId>RESTModel</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>ky.gov</groupId>
+      <artifactId>RESTWebService</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+</project>
